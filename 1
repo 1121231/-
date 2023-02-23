@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+import sys
+import easygui
+f=easygui.enterbox("请输入符号：")
+if f=="+":
+    n="加数"
+    n1="加数"
+elif f=="-":
+    n="被减数"
+    n1="减数"
+elif f=="*":
+    n="被乘数"
+    n1="乘数"
+elif f=="/":
+    n="被除数"
+    n1="除数"
+else:
+    easygui.msgbox("不符合规定！")
+    sys.exit(0)
+s1=easygui.enterbox("请输入"+n+":")
+s2=easygui.enterbox("请输入"+n1+":")
+int(s1)
+int(s2)
+if f=="+":
+    re=s1+s2
+    easygui.msgbox("和是："+re)
+elif f=="-":
+    re=s1-s2
+    easygui.msgbox("差是："+re)
+elif f=="*":
+    re=s1*s2
+    easygui.msgbox("积是："+re)
+elif f=="/":
+    if s2!=0:
+        re=s1/s2
+        easygui.msgbox("商是："+re)
+    else:
+        easygui.msgbox("不符合规定！")
